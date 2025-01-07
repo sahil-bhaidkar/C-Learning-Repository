@@ -22,6 +22,6 @@ int main(){
         }
         cout << endl;
     }
-
+    cout << num; // Checking final num variable (You can ignore this line.) 
     return 0;
 }
