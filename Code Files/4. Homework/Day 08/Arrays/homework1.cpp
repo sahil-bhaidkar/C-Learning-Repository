@@ -5,6 +5,7 @@ using namespace std;
 int main(){
     // Initialisation of blank array:
     int nums[] ={5,15,22,1,-15,24};
+    int minindex,maxindex;
     int s = sizeof(nums)/sizeof(int); // calculating length of the initialised array.
     int minimum =INT_MAX; // +∞ (+Infinity)
     int maximum = INT_MIN; // -∞ (-Infinity)
@@ -23,16 +24,15 @@ int main(){
     for(int i= 0; i<s;i++){
         //Shortest way :
         minimum = min(nums[i], minimum);
-    }
-
-    //Loop for each item's Iteration to find minimum value:
-    for(int i= 0; i<s;i++){
-        //Shortest way :
+        minindex = i;
         maximum = max(nums[i], maximum);
+        maxindex = i;
     }
 
     cout << "Smallest number in the array : " << minimum <<endl;
+    cout << "Smallest numer location at :" << minindex << endl;
     cout << "Biggest number in the array : " << maximum <<endl;
+    cout << "Biggest numer location at :" << maxindex << endl;
 
     return 0;
 }
